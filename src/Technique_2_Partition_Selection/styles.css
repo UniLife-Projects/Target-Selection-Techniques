@@ -1,0 +1,90 @@
+html,
+body {
+  height: 100%;
+  background-color: navy;
+}
+.app-window {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(400px, 400px) 1fr;
+}
+.sidebar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-color: goldenrod;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+.ui-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  background-color: navy;
+  place-items: center;
+}
+.volume-text {
+  color: goldenrod;
+  font-weight: bold;
+  font-size: large;
+  display: inline-block;
+}
+.volume-button {
+  background-color: transparent;
+  color: goldenrod;
+  font-size: 1em;
+  font-weight: bold;
+  border: 3px solid goldenrod;
+  border-radius: 10px;
+}
+#volume-display {
+  font-weight: bold;
+  font-size: large;
+}
+#cursor-floor,
+.b0,
+.b1,
+.b2,
+.b3,
+.b4,
+.b5 {
+  position: absolute;
+  background-color: transparent;
+  color: goldenrod;
+  font-size: 1em;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+#tester {
+  background-color: goldenrod;
+  position: absolute;
+  display: grid;
+  place-content: center;
+  left: 50%;
+  top: 5%;
+  width: 400px;
+  height: 200px;
+  border-radius: 25px;
+  text-align: center;
+}
+#volume-target {
+  font-weight: bold;
+}
+
+/* Ensures image can move around freely independently without interrupting document structure */
+#floatingImage {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  display: none;
+  /* display: block; */
+}
+
+/* Hides pause button and removes it from HTML doc flow */
+#pause-button {
+  display: none;
+}
